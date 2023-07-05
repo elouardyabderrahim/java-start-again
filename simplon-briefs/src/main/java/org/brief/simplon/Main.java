@@ -17,6 +17,6 @@ public class Main {
         StaticKeyWord.desplayNumOfFriend();
 
 
-        //System.out.println(StaticKeyWord.numberOfFriends);
+        System.out.println(StaticKeyWord.numberOfFriends);
     }
 }
