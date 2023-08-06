@@ -2,7 +2,7 @@ package simplon.model;
 
 public class Etudiant {
     private int etudiantId;
-    private String nom,prenom,email, adresse, ville, pays;
+    private String nom, prenom, email;
 
     public int getEtudiantId() {
         return etudiantId;
@@ -36,29 +36,6 @@ public class Etudiant {
         this.email = email;
     }
 
-    public String getAdresse() {
-        return adresse;
-    }
-
-    public void setAdresse(String adresse) {
-        this.adresse = adresse;
-    }
-
-    public String getVille() {
-        return ville;
-    }
-
-    public void setVille(String ville) {
-        this.ville = ville;
-    }
-
-    public String getPays() {
-        return pays;
-    }
-
-    public void setPays(String pays) {
-        this.pays = pays;
-    }
 
     public Etudiant() {
     }
@@ -70,9 +47,10 @@ public class Etudiant {
                 ", nom='" + nom + '\'' +
                 ", prenom='" + prenom + '\'' +
                 ", email='" + email + '\'' +
-                ", adresse='" + adresse + '\'' +
-                ", ville='" + ville + '\'' +
-                ", pays='" + pays + '\'' +
                 '}';
     }
+    // https://www.baeldung.com/java-equals-hashcode-contracts
+
 }
+
+

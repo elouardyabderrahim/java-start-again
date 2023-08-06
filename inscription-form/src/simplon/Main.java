@@ -3,7 +3,10 @@ package simplon;
 
 import simplon.config.DbConnection;
 
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 
 public class Main {
     public static void main(String[] args) throws SQLException {
@@ -12,21 +15,15 @@ public class Main {
         String sql="SELECT * FROM ETUDIANT";
 try {
     Statement stmt = conn.createStatement();
-
     ResultSet resultSet=stmt.executeQuery(sql);
     while(resultSet.next()){
         System.out.println("id :" + resultSet.getInt("etudiantID"));
         System.out.println("id :" + resultSet.getString("prenom"));
         System.out.println("-----------------_____________-----------------");
-
-
     }
 
     conn.close();
 }
-
-
-
 catch(SQLException e){
     System.out.println ( e.getSQLState());
     System.out.println(e);
